@@ -60,7 +60,7 @@ public class Login extends JFrame{
             if (role == 0) {
                 Admin admin = adminDao.login(userName, passWord);
                 if (admin == null) {
-                    JOptionPane.showMessageDialog(contentPane, "用户名或者密码错误0！", "系统提示", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(contentPane, "用户名或者密码错误！", "系统提示", JOptionPane.WARNING_MESSAGE);
                     passwordField.setText("");
                     return;
                 }
@@ -72,7 +72,7 @@ public class Login extends JFrame{
             if (role == 1) {
                 Teacher teacher = teacherDao.login(userName, passWord);
                 if (teacher == null) {
-                    JOptionPane.showMessageDialog(contentPane, "用户名或者密码错误1！", "系统提示", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(contentPane, "用户名或者密码错误！", "系统提示", JOptionPane.WARNING_MESSAGE);
                     passwordField.setText("");
                     return;
                 }
@@ -85,7 +85,7 @@ public class Login extends JFrame{
             else if (role == 2) {
                 Student student = studentDao.login(userName, passWord);
                 if (student == null) {
-                    JOptionPane.showMessageDialog(contentPane, "用户名或者密码错误2！", "系统提示", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(contentPane, "用户名或者密码错误！", "系统提示", JOptionPane.WARNING_MESSAGE);
                     passwordField.setText("");
                     return;
                 }
