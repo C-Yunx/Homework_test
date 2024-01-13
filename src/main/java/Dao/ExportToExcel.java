@@ -22,11 +22,11 @@ public class ExportToExcel {
 
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
             // 分别导出各个表格到Excel文件
-            exportTableToExcel(connection, "t_admin", "D:\\Java_project\\ClassHomework\\Homework_test\\管理员表.xlsx");
-            exportTableToExcel(connection, "t_apply", "D:\\Java_project\\ClassHomework\\Homework_test\\奖学金申请表.xlsx");
-            exportTableToExcel(connection, "t_scholarship", "D:\\Java_project\\ClassHomework\\Homework_test\\奖学金表.xlsx");
-            exportTableToExcel(connection, "t_student", "D:\\Java_project\\ClassHomework\\Homework_test\\学生表.xlsx");
-            exportTableToExcel(connection, "t_teacher", "D:\\Java_project\\ClassHomework\\Homework_test\\辅导员表.xlsx");
+            exportTableToExcel(connection, "t_admin", "D:\\Java_project\\ClassHomework\\Homework_test\\Excel表\\管理员表.xlsx");
+            exportTableToExcel(connection, "t_apply", "D:\\Java_project\\ClassHomework\\Homework_test\\Excel表\\奖学金申请表.xlsx");
+            exportTableToExcel(connection, "t_scholarship", "D:\\Java_project\\ClassHomework\\Homework_test\\Excel表\\奖学金表.xlsx");
+            exportTableToExcel(connection, "t_student", "D:\\Java_project\\ClassHomework\\Homework_test\\Excel表\\学生表.xlsx");
+            exportTableToExcel(connection, "t_teacher", "D:\\Java_project\\ClassHomework\\Homework_test\\Excel表\\辅导员表.xlsx");
 
             System.out.println("文件创建成功！");
 

@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS `t_teacher`;
 CREATE TABLE `t_teacher` (
   `id` varchar(32) NOT NULL COMMENT '辅导员工号',
-  `username` varchar(32) DEFAULT NULL COMMENT '账号',
+  `username` varchar(32) DEFAULT NULL unique COMMENT '账号',
   `password` varchar(32) DEFAULT NULL COMMENT '密码',
   `nickname` varchar(32) DEFAULT NULL COMMENT '姓名',
   `sex` int(11) DEFAULT NULL COMMENT '性别：0男，1女',
