@@ -13,6 +13,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 /**
+ * 更新辅导员信息的视图
  * @author 13425
  */
 public class AdminTeacherUpdateView extends JFrame{

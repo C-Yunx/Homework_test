@@ -21,6 +21,13 @@ public class DateUtil {
         return result;
     }
 
+    /**
+     * 格式化输入的字符串
+     * @param str
+     * @param format
+     * @return
+     * @throws ParseException
+     */
     public static Date formatString(String str, String format) throws ParseException {
 
         SimpleDateFormat sdf = new SimpleDateFormat(format);

@@ -15,6 +15,7 @@ public class JDBCUtils {
 
     /**
      * 数据库连接
+     * @return	数据库连接
      */
     public static Connection getConnection() {
         Connection con = null;

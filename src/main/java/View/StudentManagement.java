@@ -18,6 +18,7 @@ import java.awt.event.ActionEvent;
 import java.util.List;
 
 /**
+ * 学生登录后界面视图
  * @author 13425
  */
 public class StudentManagement extends JFrame {
@@ -293,6 +294,9 @@ public class StudentManagement extends JFrame {
         }
     }
 
+    /**
+     * 加载已有的奖学金表数据
+     */
     protected void loadTable2() {
         List<Apply> list = new ApplyDao().queryList(DataTemp.studentId);
         DefaultTableModel tableModel = (DefaultTableModel) table2.getModel();
@@ -324,6 +328,11 @@ public class StudentManagement extends JFrame {
         }
     }
 
+    /**
+     * 加载筛选后的奖学金表的数据
+     * @param scholarshipName
+     * @param roleText
+     */
     protected void loadTable1(String scholarshipName, String roleText) {
         List<Scholarship> list = new ScholarshipDao().queryList(scholarshipName, roleText);
         DefaultTableModel tableModel = (DefaultTableModel) table1.getModel();

@@ -17,6 +17,7 @@ import java.awt.event.ActionEvent;
 import java.util.List;
 
 /**
+ * 辅导员登录后界面
  * @author 13425
  */
 public class TeacherManagement extends JFrame {
@@ -286,6 +287,9 @@ public class TeacherManagement extends JFrame {
         }
     }
 
+    /**
+     * 加载奖学金申请数据
+     */
     private void loadApply() {
         List<Apply> list = applyDao.queryList1(null, null, null);
         DefaultTableModel model = (DefaultTableModel) table2.getModel();
@@ -312,6 +316,10 @@ public class TeacherManagement extends JFrame {
         }
     }
 
+    /**
+     * 根据学生名字筛选情况来加载当前学生的数据
+     * @param nickName
+     */
     protected void loadstudent(String nickName) {
         List<Student> list = studentDao.queryList(null, nickName, null);
         DefaultTableModel model = (DefaultTableModel) table1.getModel();

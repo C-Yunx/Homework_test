@@ -728,6 +728,10 @@ public class AdminManagement extends JFrame {
         }
     }
 
+    /**
+     * 加载已发放奖学金列表
+     * @param applyNickName 申请姓名
+     */
     private void load4(String applyNickName) {
         List<Apply> list = new ApplyDao().queryList2(applyNickName);
         DefaultTableModel tableModel = (DefaultTableModel) studentTable5.getModel();
@@ -745,6 +749,13 @@ public class AdminManagement extends JFrame {
             tableModel.addRow(arr);
         }
     }
+
+    /**
+     * 加载申请奖学金表数据
+     * @param nickName 申请人姓名
+     * @param classNumber 申请人学号
+     * @param scholarshipName 申请的奖学金名称
+     */
     private void load3(String nickName, String classNumber, String scholarshipName) {
         List<Apply> list = new ApplyDao().queryList1(nickName, classNumber, scholarshipName);
         DefaultTableModel tableModel = (DefaultTableModel) studentTable4.getModel();
@@ -780,6 +791,11 @@ public class AdminManagement extends JFrame {
         }
     }
 
+    /**
+     * 根据筛选条件加载奖已有学金表数据
+     * @param scholarshipName 奖学金名称
+     * @param roleText 奖学金类别
+     */
     protected void load2(String scholarshipName, String roleText) {
         List<Scholarship> list = new ScholarshipDao().queryList(scholarshipName, roleText);
         DefaultTableModel tableModel = (DefaultTableModel) studentTable3.getModel();
@@ -798,6 +814,11 @@ public class AdminManagement extends JFrame {
         }
     }
 
+    /**
+     * 加载辅导员信息表数据
+     * @param id 辅导员工号
+     * @param nickname 辅导员姓名
+     */
     protected void load1(String id, String nickname) {
         List<Teacher> list = new TeacherDao().queryList(id, nickname);
         DefaultTableModel tableModel = (DefaultTableModel) studentTable2.getModel();
@@ -816,6 +837,12 @@ public class AdminManagement extends JFrame {
         }
     }
 
+    /**
+     * 加载学生信息表数据
+     * @param id 学号
+     * @param nickname 姓名
+     * @param classNumber 学生所在班级
+     */
     protected void load(String id, String nickname, String classNumber) {
         List<Student> list = studentDao.queryList(id, nickname, classNumber);
         DefaultTableModel tableModel = (DefaultTableModel) studentTable.getModel();

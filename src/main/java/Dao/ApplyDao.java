@@ -47,6 +47,7 @@ public class ApplyDao {
 
     /**
      * 查询申请列表
+     * @param userId
      */
     public List<Apply> queryList(String userId) {
         List<Apply> list = new ArrayList<>();
@@ -85,7 +86,7 @@ public class ApplyDao {
      * @param nickName
      * @param classNumber
      * @param scholarshipName
-     * @return
+     * @return 
      */
     public List<Apply> queryList1(String nickName, String classNumber, String scholarshipName) {
         List<Apply> list = new ArrayList<>();
@@ -139,6 +140,7 @@ public class ApplyDao {
     /**
      * 管理员通过奖项名来查询已经通过申请的申请
      * @param scholarshipName
+     * @return
      */
     public List<Apply> queryList2(String scholarshipName) {
         List<Apply> list = new ArrayList<>();
@@ -229,6 +231,8 @@ public class ApplyDao {
 
     /**
      * 管理员通过申请表的id删除申请表
+     * @param id
+     * @return
      */
     public boolean delete(int id) {
         Connection con = null;
@@ -252,6 +256,8 @@ public class ApplyDao {
 
     /**
      * 管理员通过奖学金审核
+     * @param id
+     * @return
      */
     public boolean setYse(int id) {
         Connection con = null;
@@ -276,6 +282,8 @@ public class ApplyDao {
 
     /**
      * 管理员不通过申请
+     * @param id
+     * @return
      */
     public boolean setNo(int id) {
         Connection con = null;
@@ -300,6 +308,8 @@ public class ApplyDao {
 
     /**
      * 辅导员通过申请
+     * @param id
+     * @return
      */
     public boolean TeacherSetYse(int id) {
         Connection con = null;
@@ -325,6 +335,8 @@ public class ApplyDao {
 
     /**
      * 辅导员不通过审请
+     * @param id
+     * @return
      */
     public boolean TeacherSetNo(int id) {
         Connection con = null;

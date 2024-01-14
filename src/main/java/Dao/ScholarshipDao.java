@@ -14,6 +14,9 @@ import java.util.List;
 public class ScholarshipDao {
     /**
      * 查询奖学金列表
+     * @param scholarshipName
+     * @param roleText
+     * @return
      */
     public List<Scholarship> queryList(String scholarshipName, String roleText) {
         List<Scholarship> list = new ArrayList<>();

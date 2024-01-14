@@ -17,6 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 /**
+ * 学生申请奖学金的视图
  * @author 13425
  */
 public class StudentApplyScholarshipView extends JFrame{

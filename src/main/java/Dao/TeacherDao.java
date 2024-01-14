@@ -50,6 +50,7 @@ public class TeacherDao {
     /**
      * 查询辅导员列表
      * @param id 账号
+     * @param nickname 姓名
      */
     public List<Teacher> queryList(String id, String nickname) {
         List<Teacher> list = new ArrayList<>();
@@ -98,8 +99,7 @@ public class TeacherDao {
 
     /**
      * 保存辅导员信息
-     * @param teacher
-     * @return
+     * @param teacher 辅导员信息
      */
     public boolean save(Teacher teacher) {
         Connection con = null;
@@ -133,8 +133,7 @@ public class TeacherDao {
 
     /**
      * 根据id查询辅导员信息
-     * @param ids
-     * @return
+     * @param ids 辅导员的ID
      */
     public Teacher getById(int ids) {
         Teacher teacher = null;
@@ -168,8 +167,8 @@ public class TeacherDao {
 
     /**
      * 根据账号查询辅导员信息
-     * @param username
-     * @return
+     * @param username 辅导员的登录账号
+     * @return teacher 返回teacher类
      */
     public Teacher getByUsername(String username) {
         Teacher teacher = null;
@@ -203,8 +202,7 @@ public class TeacherDao {
 
     /**
      * 更新辅导员信息
-     * @param teacher
-     * @return
+     * @param teacher 要更新的辅导员
      */
     public boolean update(Teacher teacher) {
         Connection con = null;
@@ -238,7 +236,7 @@ public class TeacherDao {
 
     /**
      * 根据id删除辅导员信息
-     * @param id
+     * @param id 辅导员ID
      * @return
      */
     public boolean delete(int id) {

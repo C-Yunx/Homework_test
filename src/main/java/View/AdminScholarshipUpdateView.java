@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 import java.util.Objects;
 
 /**
+ * 更新奖学金的信息的视图
  * @author 13425
  */
 public class AdminScholarshipUpdateView extends JFrame{

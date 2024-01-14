@@ -18,6 +18,7 @@ import java.awt.event.ActionEvent;
 import java.util.Objects;
 
 /**
+ * 登录界面视图
  * @author 13425
  */
 public class Login extends JFrame{
@@ -64,6 +65,7 @@ public class Login extends JFrame{
                     passwordField.setText("");
                     return;
                 }
+                //获取当前登录的管理员的信息存储到DataTemp中便于后续使用
                 DataTemp.uid = admin.getUsername();
                 DataTemp.password = admin.getPassword();
                 new AdminManagement();
@@ -76,6 +78,7 @@ public class Login extends JFrame{
                     passwordField.setText("");
                     return;
                 }
+                //获取当前登录的教师的信息存储到DataTemp中便于后续使用
                 DataTemp.uid = teacher.getUsername();
                 DataTemp.password = teacher.getPassword();
                 DataTemp.teacherId = teacher.getId();
@@ -89,6 +92,7 @@ public class Login extends JFrame{
                     passwordField.setText("");
                     return;
                 }
+                //获取当前登录的学生的信息存储到DataTemp中便于后续使用
                 DataTemp.studentId = student.getId();
                 DataTemp.studentName = student.getUsername();
                 DataTemp.studentClass = student.getClassNumber();
