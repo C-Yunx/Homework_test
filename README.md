@@ -9,4 +9,3 @@
 - 我自己使用的时候是没有任何报错的，用的 JDK 版本为 20.0.2, vendor: Oracle Corporation，IDEA 版本号为 IntelliJ IDEA 2023.3.2 (Ultimate Edition)，系统为 Windows11 22H2，Maven 版本为 Apache Maven 3.9.6。
 - 数据库是MySQL，数据库名称需要自行去 src/main/java/Util/JDBCUtils.java 中获取和修改。
 - 数据表名称已在建表语句中，直接在对应的数据库中执行即可完成建表，然后再执行给的数据表即可。
-- test
